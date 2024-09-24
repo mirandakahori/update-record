@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Goods</title></head>
+<body>
+	<h1>Goodsテーブル</h1>
+	<form action="/" method="post">
+		id <input type="text" name="id" /><br>
+		名前 <input type="text" name="name" /><br>
+		値段 <input type="text" name="price" /><br>
+		<button>送信</button><br><br>
+	</form>
+
+<table border="1">
+	<tr><th>ID</th><th>名前</th><th>値段</th></tr>
+	<tr th:each="obj : ${htmllist}">
+		<td th:text="${obj.id}"></td>
+		<td th:text="${obj.name}"></td>
+		<td th:text="${obj.price}"></td>
+	</tr>
+	</table>
+</body>
+</html>
